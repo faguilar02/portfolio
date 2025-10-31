@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react";
 
 interface FooterProps {
-  language: "es" | "en"
+  language: "es" | "en";
 }
 
 export default function Footer({ language }: FooterProps) {
@@ -18,15 +18,17 @@ export default function Footer({ language }: FooterProps) {
       contact: "Ponte en contacto",
       copyright: "© 2025 Fernando Aguilar. Todos los derechos reservados.",
     },
-  }
+  };
 
-  const text = content[language]
+  const text = content[language];
 
   return (
     <footer className="py-16 px-6 border-t border-border">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold mb-4 gradient-text">{text.tagline}</h3>
+          <h3 className="text-3xl font-bold mb-4 gradient-text">
+            {text.tagline}
+          </h3>
           <a
             href="mailto:davidfer.aguilar02@gmail.com"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
@@ -62,9 +64,11 @@ export default function Footer({ language }: FooterProps) {
         </div>
 
         <div className="text-center text-sm text-muted-foreground">
-          <p className="flex items-center justify-center gap-2">{text.copyright}</p>
+          <p className="flex items-center justify-center gap-2">
+            {text.copyright}
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
